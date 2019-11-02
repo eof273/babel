@@ -6,7 +6,8 @@
     "build": "make build",
     "fix": "make fix",
     "lint": "make lint",
-    "test": "make test"
+    "test": "make test",
+    "directly jest": "BABEL_ENV=test node_modules/.bin/jest -u packages/babel-parser/test/curry-function.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.0",
@@ -84,11 +85,6 @@
     "*.js": [
       "eslint --format=codeframe"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "jest": {
     "collectCoverageFrom": [
